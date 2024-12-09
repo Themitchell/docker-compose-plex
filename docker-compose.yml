@@ -11,7 +11,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./config:/config
-      # - /volume3/Media/media:/data/media
+      - /mnt/Media/media:/data/media
     devices:
       - /dev/dri:/dev/dri
     restart: unless-stopped
