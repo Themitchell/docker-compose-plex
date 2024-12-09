@@ -1,0 +1,19 @@
+---
+version: "3.1"
+services:
+  plex:
+    image: linuxserver/plex
+    environment:
+      PUID: $UID
+      PGID: $GID
+      VERSION: docker
+    env_file: .env
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./config:/config
+      # - /volume3/Media/media:/data/media
+    devices:
+      - /dev/dri:/dev/dri
+    restart: unless-stopped
+    ports:
+      - "32400:32400"

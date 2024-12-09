@@ -1,0 +1,4 @@
+.env
+
+config/plex/*
+!config/plex/.gitkeep
